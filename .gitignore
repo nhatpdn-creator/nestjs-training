@@ -3,6 +3,9 @@
 /node_modules
 /build
 
+# MinIO
+minio-data/
+
 # Logs
 logs
 *.log
