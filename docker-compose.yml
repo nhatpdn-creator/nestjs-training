@@ -1,0 +1,16 @@
+services:
+ minio: 
+  image: minio/minio:latest
+  container_name: minio
+  ports:
+    - "9200:9000"
+    - "9201:9001"
+  volumes:
+    - ./minio-data:/data
+  environment:
+    MINIO_ROOT_USER: pdnnadmin
+    MINIO_ROOT_PASSWORD: pdnnadmin123
+  command: 
+    - server
+    - /data
+    - --console-address=:9001
